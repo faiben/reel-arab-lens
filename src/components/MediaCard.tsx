@@ -41,7 +41,8 @@ const MediaCard = ({ media }: MediaCardProps) => {
     portrayal, 
     characters, 
     imageUrl,
-    rating 
+    rating,
+    shaheen_category 
   } = media;
 
   return (
@@ -61,6 +62,11 @@ const MediaCard = ({ media }: MediaCardProps) => {
         <div className="absolute top-2 right-2">
           <Badge className="bg-terracotta">{genre}</Badge>
         </div>
+        {shaheen_category && (
+          <div className="absolute bottom-2 left-2">
+            <Badge className="bg-gold text-navy">{shaheen_category}</Badge>
+          </div>
+        )}
       </div>
       
       <CardHeader>
@@ -73,11 +79,11 @@ const MediaCard = ({ media }: MediaCardProps) => {
       
       <CardContent className="flex-grow">
         <div className="mb-4">
-          <h4 className="font-medium text-sm mb-1">Representation Analysis:</h4>
+          <h4 className="font-medium text-sm mb-1">Shaheen's Analysis:</h4>
           <p className="text-sm text-muted-foreground line-clamp-3">{portrayal}</p>
         </div>
         <div className="flex items-center">
-          <span className="font-medium mr-2">Rating:</span>
+          <span className="font-medium mr-2">Representation Score:</span>
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
               <svg
@@ -110,6 +116,9 @@ const MediaCard = ({ media }: MediaCardProps) => {
                   {type === 'TV' ? <Tv className="mr-1 h-3 w-3" /> : <Film className="mr-1 h-3 w-3" />}
                   {type}
                 </Badge>
+                {shaheen_category && (
+                  <Badge className="bg-gold text-navy">{shaheen_category}</Badge>
+                )}
               </DialogTitle>
               <DialogDescription className="text-base">{year}</DialogDescription>
             </DialogHeader>
@@ -120,7 +129,7 @@ const MediaCard = ({ media }: MediaCardProps) => {
             </div>
             
             <div className="my-6">
-              <h3 className="text-lg font-medium mb-2">Overall Representation</h3>
+              <h3 className="text-lg font-medium mb-2">Shaheen's Analysis</h3>
               <p className="italic text-muted-foreground">{portrayal}</p>
             </div>
             

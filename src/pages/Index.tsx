@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import MediaCard from '@/components/MediaCard';
 import { Button } from "@/components/ui/button";
-import { Film, Tv, BarChart2 } from 'lucide-react';
+import { Film, Tv, BarChart2, BookOpen } from 'lucide-react';
 
 const Index = () => {
   const featuredMedia = getFeaturedMedia();
@@ -64,7 +64,7 @@ const Index = () => {
                   <Tv className="h-12 w-12 text-navy mb-4 group-hover:text-terracotta transition-colors" />
                   <h3 className="text-xl font-bold mb-2">Explore TV Shows</h3>
                   <p className="text-muted-foreground mb-4">
-                    Analyze how Arab and Muslim characters have been portrayed in television series over time.
+                    Analyze how Arab and Muslim characters have been stereotyped and vilified in television shows.
                   </p>
                   <Button className="bg-navy hover:bg-navy/90">
                     Browse TV Shows
@@ -77,7 +77,7 @@ const Index = () => {
                   <Film className="h-12 w-12 text-navy mb-4 group-hover:text-terracotta transition-colors" />
                   <h3 className="text-xl font-bold mb-2">Explore Films</h3>
                   <p className="text-muted-foreground mb-4">
-                    Examine the evolution of Arab and Muslim representation in cinema throughout film history.
+                    Examine the century-long history of Arab stereotyping in Hollywood films documented by Jack Shaheen.
                   </p>
                   <Button className="bg-navy hover:bg-navy/90">
                     Browse Films
@@ -90,15 +90,20 @@ const Index = () => {
         
         <div className="border-t pt-16 pb-12">
           <div className="text-center max-w-2xl mx-auto">
-            <BarChart2 className="mx-auto h-12 w-12 text-navy mb-4" />
-            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">About This Project</h2>
+            <BookOpen className="mx-auto h-12 w-12 text-navy mb-4" />
+            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">About Jack Shaheen's Work</h2>
+            <p className="text-muted-foreground mb-4">
+              Dr. Jack Shaheen (1935-2017) was a pioneering media scholar who dedicated his career to 
+              documenting and challenging the stereotypical portrayals of Arabs and Muslims in Western media.
+            </p>
             <p className="text-muted-foreground mb-6">
-              Reel Arab Lens analyzes the portrayal of Arab and Muslim characters in television and film, 
-              highlighting both problematic stereotypes and positive, authentic representation. Our goal is to 
-              raise awareness about media representation and its impact on public perception.
+              His groundbreaking book "Reel Bad Arabs: How Hollywood Vilifies a People" (2001) analyzed over 
+              1,000 films, revealing how the entertainment industry has consistently portrayed Arabs as villains,
+              reinforcing harmful stereotypes that have real-world consequences.
             </p>
             <p className="text-navy font-medium">
-              Explore our database to learn more about how Arab and Muslim characters are portrayed in media.
+              This project is inspired by Shaheen's work and aims to continue his legacy by 
+              analyzing media representation of Arabs and Muslims.
             </p>
           </div>
         </div>
